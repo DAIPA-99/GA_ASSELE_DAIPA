@@ -10,10 +10,10 @@ This module is accompanied of a cities.txt file, containing a list of
 2D coordinates representing different cities.
 """
 
+import matplotlib.pyplot as plt
 from random import shuffle
 from typing import List, Dict, Tuple, Optional
 from collections.abc import Iterable, Mapping
-import matplotlib as plt
 import random
 
 Coordinates = Tuple[int, int]

@@ -19,6 +19,7 @@ _colors = ['blue', 'red', 'green', 'yellow', 'orange', 'violet']
 _colors_to_int = dict([(c, i) for i, c in enumerate(_colors)])
 
 
+
 def get_possible_colors():
     """Getter function to read the array of possible colors"""
     return _colors
@@ -57,6 +58,7 @@ class MastermindMatch:
         self._secret = generate_random_secret(secret_size)
         self.correct_color_points = correct_color_points
         self.correct_position_points = correct_position_points
+
 
     def is_correct(self, guess: List[str]) -> bool:
         """Checks whether a guess matches the secret code
@@ -114,3 +116,5 @@ def encode_guess(guess: List[str]) -> List[int]:
         list[int]: a mastermind guess as a list of integers
     """
     return [_colors_to_int[c] for c in guess]
+
+

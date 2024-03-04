@@ -10,12 +10,11 @@ Template for exercise 1
 
 import random
 import cities
-import matplotlib as plt
 
 def new_indidual_from_2_parents(first_parent, second_parent):
     possible_cities = cities.default_road(city_dict)
     new_chrom = first_parent.chromosome[0:len(first_parent.chromosome)//2]
-    new_chrom += [chrom for chrom in second_parent.chromosome[len(second_parent.chromosome)//2:] if chrom not in new_chrom]
+    new_chrom += [chrom for chrom in second_parent.chromosome[len(second_parent.chromosome)//2:] if chrom not in new_chrom}
     while len(new_chrom) < len(first_parent.chromosome):
         u = random.choice(possible_cities)
         if u not in new_chrom:
