@@ -96,8 +96,6 @@ class GASolver:
                             + self._population[:int(proportion_to_delete)]
 
         self._population.sort()
-
-
     
     def show_generation_summary(self):
         """ Print some debug information on the current state of the population """
