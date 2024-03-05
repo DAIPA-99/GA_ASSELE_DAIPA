@@ -132,9 +132,6 @@ class GASolver:
            self.evolve_for_one_generation()
 
 
-
-
-
 city_dict = cities.load_cities("cities.txt")
 
 solver = GASolver()
