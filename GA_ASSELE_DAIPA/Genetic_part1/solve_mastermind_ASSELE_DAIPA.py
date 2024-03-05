@@ -10,11 +10,15 @@ Template for exercise 1
 import mastermind as mm
 import random
 
+# Define a function to generate a new individual by combining genetic information from two parents.
+# Select a random crossover point 'x_point' within the length of the chromosome of the first parent.
 def new_indidual_from_2_parents(first_parent, second_parent):
     x_point = random.randrange(0, len(first_parent.chromosome))
     new_chromose = first_parent.chromosome[0:x_point] + second_parent.chromosome[x_point:]
     return Individual(new_chromose, MATCH.rate_guess(new_chromose))
 
+# Define a mutation function to introduce changes to a parent's chromosome.
+# Retrieve possible colors from a mastermind game and randomly select one for mutation.
 def mutation(parent):
     possibles_colors = mm.get_possible_colors()
     new_gene = random.choice(possibles_colors)
@@ -56,6 +60,8 @@ class GASolver:
         self._mutation_rate = mutation_rate
         self._population = []
 
+    #This function create a random individuals and append them to
+    #the population list 
     def reset_population(self, pop_size=50):
         """ Initialize the population with pop_size random Individuals """
         chromosomes = [MATCH.generate_random_guess()  for _ in range(pop_size)]
@@ -71,7 +77,10 @@ class GASolver:
                 mutation_rate i.e., mutate it if a random value is below   
                 mutation_rate
         """
-        # remove weakest individuals
+        # The population is sorted in descending order,
+        # Remove weakest individuals at the end,
+        # Calculate the proportion of individuals to delete based on the selection rate.
+        # Delete the specified proportion of individuals from the end of the population list.
         self._population.sort(reverse=True)
         proportion_to_delete = self._selection_rate * len(self._population)
         del self._population[int(proportion_to_delete):]
@@ -89,7 +98,7 @@ class GASolver:
         self._population.sort()
 
 
-
+    
     def show_generation_summary(self):
         """ Print some debug information on the current state of the population """
         print("Genzration summary:")
@@ -99,7 +108,8 @@ class GASolver:
         print(f"Best fitness score: {self.get_best_individual().fitness}")
 
     def get_best_individual(self):
-        """ Return the best Individual of the population """
+        """ Return the best Individual of the population 
+        by sorting the population in ascending order and returning the last element."""
         self._population.sort()
         return self._population[-1]
 
@@ -108,6 +118,11 @@ class GASolver:
             - Max nb of generation is achieved
             - The fitness of the best Individual is greater than or equal to
               threshold_fitness
+        Args:
+        max_nb_of_generations (int): Maximum number of generations to evolve for.
+                                     Defaults to 500.
+        threshold_fitness (float): Threshold fitness value to stop evolution once reached.
+                                   If None, this condition is ignored.
         """
         for _ in range(max_nb_of_generations):
             self.evolve_for_one_generation()

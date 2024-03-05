@@ -53,6 +53,8 @@ class GAProblem:
 
 
 class GASolver:
+    """Represents a genetic algorithm solver"""
+    
     def __init__(self, problem: GAProblem, selection_rate=0.5, mutation_rate=0.1):
         """Initializes an instance of a ga_solver for a given GAProblem
 
@@ -101,7 +103,7 @@ class GASolver:
 
     def show_generation_summary(self):
         """ Print some debug information on the current state of the population """
-        print("Genzration summary:")
+        print("Generation summary:")
         print(f"current population: {self._population}")
         print(f"Population size: {len(self._population)}")
         print(f"Best individual: {self.get_best_individual()}")

@@ -11,6 +11,9 @@ Template for exercise 1
 import random
 import cities
 
+# Generate a new individual by combining genetic material from two parents.
+# The first half of the chromosome comes from the first parent, and the second half from the second parent,
+# ensuring no repetition, and then fill the rest with random cities.
 def new_indidual_from_2_parents(first_parent, second_parent):
     possible_cities = cities.default_road(city_dict)
     new_chrom = first_parent.chromosome[0:len(first_parent.chromosome)//2]
@@ -21,6 +24,7 @@ def new_indidual_from_2_parents(first_parent, second_parent):
             new_chrom.append(u)
     return Individual(new_chrom, - cities.road_length(city_dict, new_chrom))
 
+# Introduce mutation in the chromosome of a parent by swapping two randomly selected genes.
 def mutation(parent):
     pos_1 = random.randint(0, len(parent.chromosome) - 1)
     pos_2 = random.randint(0, len(parent.chromosome) - 1)
@@ -62,6 +66,9 @@ class GASolver:
         self._mutation_rate = mutation_rate
         self._population = []
 
+    # Generate the initial chromosome representing default roads connecting cities.
+    # Generate random chromosomes for the population based on the initial chromosome.
+    # Create Individual objects for each chromosome in the population with fitness evaluated based on road length.    
     def reset_population(self, pop_size=50):
         """ Initialize the population with pop_size random Individuals """
         chrom_initial = cities.default_road(city_dict)
@@ -79,7 +86,11 @@ class GASolver:
                 mutation_rate i.e., mutate it if a random value is below   
                 mutation_rate
         """
-        # remove weakest individuals
+        
+        # The population is sorted in descending order,
+        # Remove weakest individuals at the end,
+        # Calculate the proportion of individuals to delete based on the selection rate.
+        # Delete the specified proportion of individuals from the end of the population list.
         self._population.sort(reverse=True)
         proportion_to_delete = self._selection_rate * len(self._population)
         del self._population[int(proportion_to_delete):]
@@ -105,7 +116,8 @@ class GASolver:
         print(f"Best fitness score: {self.get_best_individual().fitness}")
 
     def get_best_individual(self):
-        """ Return the best Individual of the population """
+        """ Return the best Individual of the population
+        by sorting in ascending order and taking the last element."""
         self._population.sort()
         return self._population[-1]
 
