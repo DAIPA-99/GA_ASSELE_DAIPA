@@ -47,7 +47,7 @@ In both cases, we apply principles inspired by `Darwin's evolutionary theory`, u
 
 Return the best Individual of the population by sorting the population in ascending order and returning the last element.
 ```python
-  def get_best_individual(self):
+  def __init__(self, chromosome: list, fitness: float):
 ```
 
 * Selection
@@ -72,15 +72,40 @@ Define a mutation function to introduce changes to a parent's chromosome, and re
 
 * Generation of a new population
 ```python
-  def get_best_individual(self):
+  def evolve_until(self, max_nb_of_generations=500, threshold_fitness=None):
 ```
 
 These functions serve as fundamental components in our approach to solving genetic problems, enabling us to iteratively improve solutions through simulated evolutionary processes.
 
 
-## Generalizing code to solve different problems :
+## GA-Problem :
 Finally, we generalized our code to solve different optimization problems. 
+To define a problem for the Genetic Algorithm solver (ga_solver), we aim to identify a common framework for both the Mastermind and TSP functions. These common functions include:
 
+* This function is used to initialize the population.
+```python
+  def __int__(self, threshold_fitness):
+```
+
+* It assists in determining the fittest individual within the population.
+```python
+  def how_to_compute_fitness(self, chromosome):
+```
+
+* This function aids in creating a new individual by crossing over two parents, selected based on the proportion of the best individual.
+```python
+  def new_individual_from_2_parents(self, first_parent, second_parent):
+```
+
+* This operation introduces random changes in individuals to promote diversity and exploration.
+```python
+  def mutation(self, parent):
+```
+
+* This function is responsible for generating a random chromosome.
+```python
+  def how_to_generate_one_random_chromosome(self):
+```
     
 ## Documentation
 
