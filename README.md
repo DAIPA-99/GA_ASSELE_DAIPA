@@ -44,18 +44,21 @@ In genetic algorithms, which are designed to optimize specific problems, such as
 In both cases, we apply principles inspired by `Darwin's evolutionary theory`, utilizing the following functions:
 
 * Evaluation of each individual
+
 Return the best Individual of the population by sorting the population in ascending order and returning the last element.
 ```python
   def get_best_individual(self):
 ```
 
 * Selection
+  
 This function make the selection by removing 50% of population (less adapted)
 ```python
   def evolve_for_one_generation(self):
 ```
 
 * Reproduction
+
 Define a function to generate a new individual by combining genetic information from two parents. Is a reproduction step of Darwin evolution
   ```python
   def new_indidual_from_2_parents(first_parent, second_parent):
