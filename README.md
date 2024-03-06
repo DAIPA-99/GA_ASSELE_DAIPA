@@ -44,34 +44,40 @@ In genetic algorithms, which are designed to optimize specific problems, such as
 In both cases, we apply principles inspired by `Darwin's evolutionary theory`, utilizing the following functions:
 
 * Evaluation of each individual
-* Selection
-* Reproduction
-* Mutation
-* Generation of a new population
-
-These functions serve as fundamental components in our approach to solving genetic problems, enabling us to iteratively improve solutions through simulated evolutionary processes.
-
-## Solving the Mastermind problem with a genetic algorithm :
-In this section, we implement a genetic algorithm to solve the Mastermind logic game, where you have to guess a secret color combination.
-
-
+Return the best Individual of the population by sorting the population in ascending order and returning the last element.
 ```python
   def get_best_individual(self):
 ```
 
-## Solving the traveling salesman problem (TSP) with a genetic algorithm:
-Here, we've adapted the previously coded genetic algorithm to solve the famous Traveling Salesman Problem (TSP), where the objective is to find the shortest path through a set of cities only once.
+* Selection
+This function make the selection by removing 50% of population (less adapted)
+```python
+  def evolve_for_one_generation(self):
+```
+
+* Reproduction
+Define a function to generate a new individual by combining genetic information from two parents. Is a reproduction step of Darwin evolution
+  ```python
+  def new_indidual_from_2_parents(first_parent, second_parent):
+```
+
+* Mutation
+Define a mutation function to introduce changes to a parent's chromosome, and retrieve possible colors from a mastermind game and randomly select one for mutation.
+```python
+  def mutation(parent):
+```
+
+* Generation of a new population
+```python
+  def get_best_individual(self):
+```
+
+These functions serve as fundamental components in our approach to solving genetic problems, enabling us to iteratively improve solutions through simulated evolutionary processes.
+
 
 ## Generalizing code to solve different problems :
 Finally, we generalized our code to solve different optimization problems. 
-## Installation
 
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
     
 ## Documentation
 
