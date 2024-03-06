@@ -21,12 +21,27 @@ You can recover source code by cloning it!
 
 :bulb: Cloning a Git repository from GitHub provides a complete local copy of the source code and associated change history. 
 
-### 1. 
+### 1. Install Git
 
 If you haven't already done so, you need to install Git on your computer.
 
 
-_You can download it from the official Git website and follow the installation instructions_ : https://git-scm.com/ 
+You can download it from the official Git website and follow the installation instructions : https://git-scm.com/
+
+### 2. 
+
+&#8594; <span style="color:green;">Once Git has been installed, open a terminal or command prompt on your computer.</span>
+
+&#8594; <span style="color:green;">Use the *cd* command to navigate to the directory where you wish to clone the repository :</span>
+
+```bash
+  cd [link to the folder where the cloned code will be stored]
+```
+&#8594; <span style="color:green;">Use the following git clone command followed by the repository URL :</span>
+
+```bash
+  git clone https://github.com/DAIPA-99/GA_ASSELE_DAIPA.git
+```
 
 # So, how does it work?
 
