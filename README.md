@@ -23,21 +23,21 @@ You can recover source code by cloning it!
 
 ### 1. Install Git
 
-If you haven't already done so, you need to install Git on your computer.
+> [!WARNING]
+> If you haven't already done so, you need to install Git on your computer.
 
+💡 You can download it from the official Git website and follow the installation instructions : https://git-scm.com/
 
-You can download it from the official Git website and follow the installation instructions : https://git-scm.com/
+### 2. Clone the deposit 
 
-### 2. 
+➡️ Once Git has been installed, open a `terminal` or `command prompt` on your computer.</font>
 
-<font color="green">Once Git has been installed, open a terminal or command prompt on your computer.</font>
-
-&#8594; <span style="color:green;">Use the *cd* command to navigate to the directory where you wish to clone the repository :</span>
+➡️ Use the `cd` command to navigate to the directory where you wish to clone the repository :
 
 ```bash
   cd [link to the folder where the cloned code will be stored]
 ```
-&#8594; <span style="color:green;">Use the following git clone command followed by the repository URL :</span>
+➡️ Use the following git clone command followed by the repository URL :
 
 ```bash
   git clone https://github.com/DAIPA-99/GA_ASSELE_DAIPA.git
