@@ -46,7 +46,7 @@ Evaluation of each individual
 * Selection
 * Reproduction
 * Mutation
-Generation of a new population
+* Generation of a new population
 These functions serve as fundamental components in our approach to solving genetic problems, enabling us to iteratively improve solutions through simulated evolutionary processes.
 
 ## Solving the Mastermind problem with a genetic algorithm :
