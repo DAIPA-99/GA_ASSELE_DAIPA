@@ -43,6 +43,8 @@ To address the common challenge, we employ similar functions applicable to two d
 In genetic algorithms, which are designed to optimize specific problems, such as in the recreational realm with Mastermind, our objective is to identify the optimal combination of colors with the highest fitness to win the game. Conversely, in the TSP algorithm, which is a geographical optimization problem, our aim is to determine the most efficient route to reach a destination.
 In both cases, we apply principles inspired by `Darwin's evolutionary theory`, utilizing the following functions:
 
+## Mastermind / TSP
+
 * Evaluation of each individual
 
 Return the best Individual of the population by sorting the population in ascending order and returning the last element.
@@ -106,6 +108,7 @@ To define a problem for the Genetic Algorithm solver (ga_solver), we aim to iden
 ```python
   def how_to_generate_one_random_chromosome(self):
 ```
+
     
 ## Documentation
 
