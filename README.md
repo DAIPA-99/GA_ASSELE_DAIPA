@@ -30,7 +30,7 @@ You can download it from the official Git website and follow the installation in
 
 ### 2. 
 
-&#8594; <span style="color:green;">Once Git has been installed, open a terminal or command prompt on your computer.</span>
+<font color="green">&#8594; Once Git has been installed, open a terminal or command prompt on your computer.</font>
 
 &#8594; <span style="color:green;">Use the *cd* command to navigate to the directory where you wish to clone the repository :</span>
 
