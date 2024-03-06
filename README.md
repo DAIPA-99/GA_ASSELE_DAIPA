@@ -26,7 +26,7 @@ You can recover source code by cloning it!
 If you haven't already done so, you need to install Git on your computer.
 
 
-[You can download it from the official Git website and follow the installation instructions :](https://git-scm.com/)
+You can download it from the official Git website and follow the installation instructions : [https://git-scm.com/] 
 
 # So, how does it work?
 
