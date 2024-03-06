@@ -8,18 +8,13 @@ Initially, this project will focus on solving the famous Mastermind problem usin
 
 Finally, a crucial step is to generalize the code developed, in order to create a common base capable of solving a wide range of optimization problems. 
 
-:bulb: You can 
-
-
-## Demo
-
-Insert gif or link to demo
 
 # Code recovery
 
 You can recover source code by cloning it!
 
-:bulb: Cloning a Git repository from GitHub provides a complete local copy of the source code and associated change history. 
+> [!NOTE]
+> Cloning a Git repository from GitHub provides a complete local copy of the source code and associated change history. 
 
 ### 1. Install Git
 
