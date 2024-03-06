@@ -55,6 +55,9 @@ These functions serve as fundamental components in our approach to solving genet
 In this section, we implement a genetic algorithm to solve the Mastermind logic game, where you have to guess a secret color combination.
 
 
+```python
+  def get_best_individual(self):
+```
 
 ## Solving the traveling salesman problem (TSP) with a genetic algorithm:
 Here, we've adapted the previously coded genetic algorithm to solve the famous Traveling Salesman Problem (TSP), where the objective is to find the shortest path through a set of cities only once.
