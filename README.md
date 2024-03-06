@@ -84,4 +84,14 @@ Finally, we generalized our code to solve different optimization problems.
     
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+[To understand Darwin's theory of evolution:](https://www.khanacademy.org/science/ap-biology/natural-selection/natural-selection-ap/a/darwin-evolution-natural-selection/)
+
+[For learning object-oriented programming:](https://realpython.com/python3-object-oriented-programming/)
+
+[To learn about list comprehension in Python:](https://www.w3schools.com/python/python_lists_comprehension.asp)
+
+[To understand how the mastermind problem works:](https://www.mathweb.fr/euclide/2022/04/19/un-mastermind-en-python/)
+
+[For understanding the Traveling Salesman Problem (TSP):](https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-implementation/)
+
+These resources provide valuable insights into various concepts and problems, helping you deepen your understanding and improve your problem-solving skills.
