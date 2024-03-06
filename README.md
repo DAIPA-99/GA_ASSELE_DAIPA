@@ -40,8 +40,8 @@ You can recover source code by cloning it!
 
 # So, how does it work?
 To address the common challenge, we employ similar functions applicable to two distinct types of genetic problems: the Mastermind problem and the TSP problem.
-In `genetic algorithms`, which are designed to optimize specific problems, such as in the recreational realm with Mastermind, our objective is to identify the optimal combination of colors with the highest fitness to win the game. Conversely, in the TSP algorithm, which is a geographical optimization problem, our aim is to determine the most efficient route to reach a destination.
-In both cases, we apply principles inspired by Darwin's evolutionary theory, utilizing the following functions:
+In genetic algorithms, which are designed to optimize specific problems, such as in the recreational realm with Mastermind, our objective is to identify the optimal combination of colors with the highest fitness to win the game. Conversely, in the TSP algorithm, which is a geographical optimization problem, our aim is to determine the most efficient route to reach a destination.
+In both cases, we apply principles inspired by `Darwin's evolutionary theory`, utilizing the following functions:
 
 * Evaluation of each individual
 * Selection
