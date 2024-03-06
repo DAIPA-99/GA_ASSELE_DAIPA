@@ -15,6 +15,18 @@ Finally, a crucial step is to generalize the code developed, in order to create 
 
 Insert gif or link to demo
 
+# Code recovery
+
+You can recover source code by cloning it!
+
+:bulb: Cloning a Git repository from GitHub provides a complete local copy of the source code and associated change history. 
+
+### 1. 
+
+If you haven't already done so, you need to install Git on your computer.
+
+
+[You can download it from the official Git website and follow the installation instructions :](https://git-scm.com/)
 
 # So, how does it work?
 
